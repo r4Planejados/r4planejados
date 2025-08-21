@@ -3,185 +3,391 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>R4 Planejados | Móveis Sob Medida</title>
-  <meta name="description" content="R4 Planejados – móveis sob medida, design exclusivo, funcionalidade e qualidade em São Paulo e Grande São Paulo." />
+  <title>Portfólio | Sua Marcenaria</title>
+  <meta name="description" content="Portfólio profissional de marcenaria: móveis sob medida, cozinhas, closets, painéis e projetos residenciais e corporativos." />
+  <meta property="og:title" content="Portfólio | Sua Marcenaria" />
+  <meta property="og:description" content="Móveis sob medida com acabamento premium e atenção aos detalhes." />
+  <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0e1113" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0e1113;
-      --panel:#14181b;
-      --text:#e8ecef;
-      --muted:#9aa4ac;
-      --brand:#b08968;
-      --accent:#d4a373;
-      --success:#68b08a;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:18px;
-      --radius-lg:28px;
-      --gap:16px;
-      --maxw:1180px;
+      /* Paleta elegante (pode trocar só aqui) */
+      --bg:#0e1113;            /* fundo escuro grafite */
+      --panel:#14181b;         /* painéis */
+      --text:#e8ecef;          /* texto principal */
+      --muted:#9aa4ac;         /* texto secundário */
+      --brand:#b08968;         /* destaque (amadeirado) */
+      --accent:#d4a373;        /* acento mais claro */
+      --success:#68b08a;       /* verde suave */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius-lg: 28px;
+      --gap: 16px;
+      --maxw: 1180px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
     img{max-width:100%;display:block}
     a{color:inherit;text-decoration:none}
-    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
-    header{position:sticky;top:0;z-index:50;background:rgba(14,17,19,.85);backdrop-filter:blur(10px)}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(to bottom, rgba(14,17,19,.85), rgba(14,17,19,.6) 40%, transparent);backdrop-filter:saturate(140%) blur(10px)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.5px}
     .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:var(--shadow)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#111;font-weight:700;box-shadow:var(--shadow);transition:.2s}
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#111;font-weight:700;box-shadow:var(--shadow);transform:translateY(0);transition:transform .2s ease, box-shadow .2s ease}
     .btn:hover{transform:translateY(-2px)}
-    nav a{margin-left:18px;font-weight:500;opacity:.9}
-    nav a:hover{opacity:1}
 
-    .hero{padding:80px 0 40px}
-    .hero-grid{display:grid;gap:28px;align-items:center}
-    @media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(34px,4vw,56px);margin:16px 0}
-    .lead{color:var(--muted);max-width:62ch}
-    .hero-cta{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px}
-    .ghost{padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
+    /* Hero */
+    .hero{position:relative;padding:88px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .kicker{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.95rem}
+    .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--success);box-shadow:0 0 0 6px rgba(104,176,138,.12)}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(36px,4.8vw,60px);line-height:1.05;margin:14px 0 14px}
+    .lead{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:62ch}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .ghost{padding:12px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:transparent}
+    .ghost:hover{border-color:rgba(255,255,255,.28)}
 
+    /* Showcase / carousel com placeholders */
+    .showcase{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:linear-gradient(180deg, #171b1e, #0f1214);box-shadow:var(--shadow)}
+    .rail{display:flex;gap:16px;animation:scroll 32s linear infinite}
+    .rail:hover{animation-play-state:paused}
+    .card{flex:0 0 360px;height:220px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(135deg, #22272b, #1a1f23);border:1px solid rgba(255,255,255,.06)}
+    .card::after{content:"Foto do projeto";position:absolute;inset:auto 12px 12px 12px;color:#c9d1d9;background:rgba(0,0,0,.35);padding:6px 10px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .ph{position:absolute;inset:0;background:
+      radial-gradient(1200px 300px at -10% -40%, rgba(212,163,115,.18), transparent 60%),
+      linear-gradient(135deg, rgba(176,137,104,.18), transparent 40%),
+      linear-gradient(180deg, #252b30, #1c2125);
+      display:flex;align-items:center;justify-content:center;color:#c7c7c7;font-weight:600;letter-spacing:.04em}
+    .ph small{display:block;font-weight:400;color:#a6afb6}
+    .badge{position:absolute;top:10px;left:10px;background:#0008;color:#fff;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:12px}
+
+    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
+
+    /* Seções */
     section{padding:64px 0}
-    .section-title{margin-bottom:32px}
-    .section-title h2{font-size:clamp(26px,3vw,38px);font-family:"Playfair Display",serif;margin-bottom:6px}
-    .section-title p{color:var(--muted)}
+    .section-title{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:24px}
+    .section-title h2{font-size:clamp(26px,3.2vw,40px);margin:0;font-family:"Playfair Display",serif}
+    .section-title p{margin:0;color:var(--muted)}
+    .grid{display:grid;gap:16px}
 
-    .grid{display:grid;gap:20px}
-
-    .service,.diferencial{background:var(--panel);border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,.06);transition:.2s}
-    .service:hover,.diferencial:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.2)}
-    .service h3,.diferencial h3{margin-bottom:6px}
+    /* Serviços */
+    .services{grid-template-columns:repeat(12,1fr)}
+    .service{grid-column:span 12;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px;display:flex;gap:14px;align-items:flex-start;transition:transform .2s ease,border-color .2s ease}
+    .service:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.16)}
+    .ico{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));flex:none;box-shadow:var(--shadow)}
+    .service h3{margin:0 0 6px 0;font-size:18px}
+    .service p{margin:0;color:var(--muted)}
 
     @media(min-width:740px){
-      .services,.diferenciais{grid-template-columns:repeat(2,1fr)}
+      .service{grid-column:span 6}
     }
     @media(min-width:1020px){
-      .services,.diferenciais{grid-template-columns:repeat(3,1fr)}
+      .service{grid-column:span 4}
     }
 
-    .quote{background:linear-gradient(180deg,#14181b,#121619);padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.06)}
-    .quote p{margin-bottom:10px;color:#cad2d8}
+    /* Processo */
+    .steps{grid-template-columns:repeat(12,1fr)}
+    .step{grid-column:span 12;background:linear-gradient(180deg,#14181b,#121619);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px}
+    .step h4{margin:0 0 6px 0}
+    .step small{color:var(--muted)}
+    @media(min-width:900px){
+      .step{grid-column:span 3}
+    }
+
+    /* Portfólio grid (placeholders prontos p/ fotos) */
+    .portfolio{grid-template-columns:repeat(12,1fr)}
+    .tile{grid-column:span 12;position:relative;border-radius:var(--radius-lg);overflow:hidden;background:#171b1e;border:1px solid rgba(255,255,255,.06)}
+    .tile .img{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#22272b,#1a1f23);display:flex;align-items:center;justify-content:center;color:#aab4bb;font-weight:600}
+    .tile .img .tag{position:absolute;top:12px;left:12px;background:#0008;color:#fff;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:12px}
+    .tile .meta{display:flex;align-items:center;justify-content:space-between;padding:12px}
+    .meta .title{font-weight:600}
+    .meta .cta{font-size:14px;color:var(--accent)}
+    @media(min-width:820px){
+      .tile{grid-column:span 6}
+    }
+    @media(min-width:1120px){
+      .tile{grid-column:span 4}
+    }
+
+    /* Depoimentos (placeholder) */
+    .quotes{display:grid;gap:16px}
+    .quote{background:linear-gradient(180deg,#14181b,#121619);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px}
+    .quote p{margin:0 0 8px 0;color:#cad2d8}
     .quote small{color:var(--muted)}
 
-    .cta{background:linear-gradient(180deg,#14181b,#121619);padding:28px;border-radius:var(--radius-lg);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
-    footer{padding:40px 0 60px;text-align:center;color:var(--muted)}
+    /* CTA */
+    .cta{background:radial-gradient(600px 200px at 20% 10%, rgba(176,137,104,.18), transparent 50%), linear-gradient(180deg,#14181b,#121619);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+
+    footer{padding:40px 0 60px;color:var(--muted)}
+    .sep{height:1px;background:linear-gradient(to right, transparent, rgba(255,255,255,.12), transparent);margin:16px 0}
+
+    /* Microinterações */
+    .hover-lift{transition:transform .2s ease}
+    .hover-lift:hover{transform:translateY(-4px)}
+
+    /* Acessibilidade: reduz animações quando preferido */
+    @media (prefers-reduced-motion: reduce){
+      .rail{animation:none}
+      .hover-lift,.btn{transition:none}
+    }
   </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#top"><span class="logo"></span> R4 Planejados</a>
-    <nav>
-      <a href="#sobre">Sobre Nós</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a class="btn" href="https://wa.me/5511985548298" target="_blank">Solicitar Orçamento</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <h1>R4 Planejados – Transformando espaços em ambientes únicos</h1>
-        <p class="lead">Mais do que móveis, criamos soluções personalizadas que unem design, funcionalidade e qualidade. Atendemos São Paulo e Grande São Paulo, oferecendo projetos exclusivos em 3D, cortes precisos e móveis planejados para residências, comércios e redes hoteleiras.</p>
-        <div class="hero-cta">
-          <a class="btn" href="https://wa.me/5511985548298" target="_blank">Fale pelo WhatsApp</a>
-          <a class="ghost" href="#servicos">Ver Serviços</a>
-        </div>
-      </div>
-      <div style="background:#1a1f23;border-radius:var(--radius-lg);height:260px;display:flex;align-items:center;justify-content:center;color:#aaa">[Imagem/Portfólio]</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Início">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Marcenaria <span style="color:var(--accent)">Autor</span></span>
+      </a>
+      <nav aria-label="Navegação principal" style="display:flex;gap:18px;align-items:center">
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato" class="btn hover-lift">Solicitar orçamento</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- SOBRE -->
-  <section id="sobre">
-    <div class="container">
-      <div class="section-title">
-        <h2>Sobre Nós</h2>
-      </div>
-      <p>Na R4 Planejados, acreditamos que cada ambiente conta uma história. Combinamos tecnologia, criatividade e mão de obra especializada para entregar projetos que unem elegância, praticidade e durabilidade. Nosso objetivo é transformar sonhos em realidade, criando espaços planejados que refletem a personalidade e as necessidades de cada cliente.</p>
-    </div>
-  </section>
-
-  <!-- DIFERENCIAIS -->
-  <section id="diferenciais">
-    <div class="container">
-      <div class="section-title">
-        <h2>Diferenciais da R4</h2>
-      </div>
-      <div class="grid diferenciais">
-        <div class="diferencial"><h3>Projetos Personalizados</h3><p>Cada móvel é planejado de acordo com o estilo e necessidades do cliente.</p></div>
-        <div class="diferencial"><h3>Qualidade e Acabamento</h3><p>Materiais de alta durabilidade e precisão nos cortes e montagem.</p></div>
-        <div class="diferencial"><h3>Entrega no Prazo</h3><p>Compromisso com cronogramas para que o cliente receba no tempo certo.</p></div>
-        <div class="diferencial"><h3>Funcionalidade</h3><p>Móveis pensados para otimizar espaços, facilitar o dia a dia e unir estética e praticidade.</p></div>
-        <div class="diferencial"><h3>Atendimento Diferenciado</h3><p>Suporte completo desde o projeto até a finalização da instalação.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section id="servicos">
-    <div class="container">
-      <div class="section-title">
-        <h2>Serviços</h2>
-      </div>
-      <div class="grid services">
-        <div class="service"><h3>Projetos em 3D</h3><p>Visualize seu ambiente antes mesmo da montagem.</p></div>
-        <div class="service"><h3>Cortes precisos e acabamento premium</h3><p>Móveis sob medida com padrão de excelência.</p></div>
-        <div class="service"><h3>Móveis planejados residenciais</h3><p>Cozinhas, dormitórios, salas, banheiros e áreas gourmet.</p></div>
-        <div class="service"><h3>Móveis comerciais e corporativos</h3><p>Escritórios, lojas, clínicas e espaços de atendimento.</p></div>
-        <div class="service"><h3>Linha hoteleira</h3><p>Móveis funcionais e sofisticados para hotéis e pousadas.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section id="depoimentos">
-    <div class="container">
-      <div class="section-title">
-        <h2>O que dizem nossos clientes</h2>
-      </div>
-      <div class="grid">
-        <div class="quote"><p>“Ficou show mano! Gostamos bastante, mandei as fotos do armário para a Jacq e ela adorou o armário. Eu também curti, ficou bem fino o trabalho.”</p><small>— Leandro Tabal</small></div>
-        <div class="quote"><p>“Vi como os armários ficaram e estou muito satisfeito com o trabalho. Certamente vou indicar seu serviço.”</p><small>— Cliente R4</small></div>
-        <div class="quote"><p>“Mais um sonho realizado! Ficamos muito felizes com o resultado e já vamos fazer a cozinha também.”</p><small>— Leda Soares</small></div>
-        <div class="quote"><p>“O armário ficou impecável! Obrigada pela paciência e cuidado com cada detalhe. Amei o trabalho da R4 e vou recomendar sempre.”</p><small>— Ingrid</small></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section>
-    <div class="container">
-      <div class="cta">
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <h3 style="margin-bottom:8px">Vamos tirar seu projeto do papel?</h3>
-          <p style="color:var(--muted)">Fale com a R4 Planejados pelo WhatsApp e peça seu orçamento personalizado.</p>
+          <div class="kicker"><span class="dot"></span> Móveis sob medida com alma artesanal</div>
+          <h1>Design em madeira<br> para ambientes que contam histórias.</h1>
+          <p class="lead">Projetos residenciais e corporativos com acabamento premium. Cozinhas planejadas, closets, painéis, painéis ripados, home offices e mobiliário autoral.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contato">Fale conosco</a>
+            <a class="ghost" href="#portfolio">Ver portfólio</a>
+          </div>
         </div>
-        <a class="btn" href="https://wa.me/5511985548298" target="_blank">Chamar no WhatsApp</a>
+        <div class="showcase" aria-label="Prévia de projetos (placeholders)">
+          <div class="rail" aria-hidden="true">
+            <!-- DUPLIQUE OU SUBSTITUA AS .card POR <img> QUANDO TIVER FOTOS -->
+            <div class="card"><span class="badge">Cozinha</span><div class="ph">COZINHA PLANEJADA <small>(substitua por imagem real)</small></div></div>
+            <div class="card"><span class="badge">Closet</span><div class="ph">CLOSET SOB MEDIDA <small>(substitua por imagem real)</small></div></div>
+            <div class="card"><span class="badge">Painel</span><div class="ph">PAINEL RIPADO <small>(substitua por imagem real)</small></div></div>
+            <div class="card"><span class="badge">Home Office</span><div class="ph">HOME OFFICE <small>(substitua por imagem real)</small></div></div>
+            <!-- Loop visual: repete para efeito de rolagem infinita -->
+            <div class="card"><span class="badge">Cozinha</span><div class="ph">COZINHA PLANEJADA <small>(substitua por imagem real)</small></div></div>
+            <div class="card"><span class="badge">Closet</span><div class="ph">CLOSET SOB MEDIDA <small>(substitua por imagem real)</small></div></div>
+            <div class="card"><span class="badge">Painel</span><div class="ph">PAINEL RIPADO <small>(substitua por imagem real)</small></div></div>
+            <div class="card"><span class="badge">Home Office</span><div class="ph">HOME OFFICE <small>(substitua por imagem real)</small></div></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="container">
-      <small>© <span id="year"></span> R4 Planejados. Todos os direitos reservados.</small>
-    </div>
-  </footer>
-</main>
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+      <div class="container">
+        <div class="section-title">
+          <h2>Serviços</h2>
+          <p>Do projeto ao acabamento.</p>
+        </div>
+        <div class="grid services">
+          <article class="service hover-lift" aria-label="Cozinhas planejadas">
+            <span class="ico" aria-hidden="true"></span>
+            <div>
+              <h3>Cozinhas Planejadas</h3>
+              <p>Mobiliário inteligente, otimização de espaço e ferragens premium para uso diário com conforto.</p>
+            </div>
+          </article>
+          <article class="service hover-lift" aria-label="Closets sob medida">
+            <span class="ico" aria-hidden="true"></span>
+            <div>
+              <h3>Closets & Quartos</h3>
+              <p>Armazenamento eficiente com visual sofisticado: lâminas naturais, MDF premium e iluminação embutida.</p>
+            </div>
+          </article>
+          <article class="service hover-lift" aria-label="Painéis e salas">
+            <span class="ico" aria-hidden="true"></span>
+            <div>
+              <h3>Salas & Painéis</h3>
+              <p>Painéis ripados, racks, estantes e detalhes que valorizam a sala de estar e TV.</p>
+            </div>
+          </article>
+          <article class="service hover-lift" aria-label="Ambientes corporativos">
+            <span class="ico" aria-hidden="true"></span>
+            <div>
+              <h3>Corporativo</h3>
+              <p>Recepções, estações de trabalho e marcenaria personalizada para sua marca.</p>
+            </div>
+          </article>
+          <article class="service hover-lift" aria-label="Projetos especiais">
+            <span class="ico" aria-hidden="true"></span>
+            <div>
+              <h3>Projetos Autorais</h3>
+              <p>Peças únicas, sob medida, com identidade artesanal e acabamento impecável.</p>
+            </div>
+          </article>
+          <article class="service hover-lift" aria-label="Instalação e manutenção">
+            <span class="ico" aria-hidden="true"></span>
+            <div>
+              <h3>Instalação & Pós-obra</h3>
+              <p>Entrega técnica, instalação limpa e suporte para ajustes finos após o uso.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <!-- PROCESSO -->
+    <section id="processo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nosso processo</h2>
+          <p>Transparente, ágil e sob medida para você.</p>
+        </div>
+        <div class="grid steps">
+          <div class="step">
+            <h4>1) Briefing</h4>
+            <small>Entendimento do espaço, medidas e estilo desejado.</small>
+          </div>
+          <div class="step">
+            <h4>2) Projeto</h4>
+            <small>Proposta 3D e definição de materiais e ferragens.</small>
+          </div>
+          <div class="step">
+            <h4>3) Produção</h4>
+            <small>Fabricação com controle de qualidade e prazos.</small>
+          </div>
+          <div class="step">
+            <h4>4) Instalação</h4>
+            <small>Montagem no local, acabamentos e entrega técnica.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO (placeholders prontos para trocar por fotos reais) -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Portfólio</h2>
+          <p>Alguns exemplos do que produzimos (fotos em breve).</p>
+        </div>
+        <div class="grid portfolio">
+          <!-- DICA: substitua cada .img por <img src="assets/cozinha-01.jpg" alt="Cozinha planejada em lâmina natural"> -->
+          <article class="tile hover-lift">
+            <div class="img"><span class="tag">Cozinha</span>FOTO DO PROJETO
+            </div>
+            <div class="meta">
+              <span class="title">Cozinha em lâmina natural</span>
+              <a class="cta" href="#">Detalhes</a>
+            </div>
+          </article>
+          <article class="tile hover-lift">
+            <div class="img"><span class="tag">Closet</span>FOTO DO PROJETO
+            </div>
+            <div class="meta">
+              <span class="title">Closet com iluminação</span>
+              <a class="cta" href="#">Detalhes</a>
+            </div>
+          </article>
+          <article class="tile hover-lift">
+            <div class="img"><span class="tag">Painel</span>FOTO DO PROJETO
+            </div>
+            <div class="meta">
+              <span class="title">Painel ripado e rack</span>
+              <a class="cta" href="#">Detalhes</a>
+            </div>
+          </article>
+          <article class="tile hover-lift">
+            <div class="img"><span class="tag">Home Office</span>FOTO DO PROJETO
+            </div>
+            <div class="meta">
+              <span class="title">Home office funcional</span>
+              <a class="cta" href="#">Detalhes</a>
+            </div>
+          </article>
+          <article class="tile hover-lift">
+            <div class="img"><span class="tag">Corporativo</span>FOTO DO PROJETO
+            </div>
+            <div class="meta">
+              <span class="title">Recepção corporativa</span>
+              <a class="cta" href="#">Detalhes</a>
+            </div>
+          </article>
+          <article class="tile hover-lift">
+            <div class="img"><span class="tag">Autorais</span>FOTO DO PROJETO
+            </div>
+            <div class="meta">
+              <span class="title">Peça autoral</span>
+              <a class="cta" href="#">Detalhes</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS (placeholders) -->
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>O que dizem</h2>
+          <p>Depoimentos de clientes (adicione quando tiver).</p>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <p>“Acabamento excelente e entrega no prazo. Recomendo.”</p>
+            <small>— Cliente Satisfeito</small>
+          </div>
+          <div class="quote">
+            <p>“Transformaram nosso espaço com muito capricho. Atendimento nota 10.”</p>
+            <small>— Cliente Residencial</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA CONTATO -->
+    <section id="contato">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h3 style="margin:0 0 6px 0;font-size:clamp(20px,2.6vw,28px)">Vamos tirar seu projeto do papel?</h3>
+            <p style="margin:0;color:var(--muted)">Envie medidas, referências e o ambiente desejado que retornamos com uma proposta.</p>
+          </div>
+          <a class="btn" href="mailto:contato@sua-marcenaria.com" aria-label="Enviar e-mail">Solicitar orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><div class="sep" role="presentation"></div></div>
+
+    <footer>
+      <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+        <small>© <span id="year"></span> Sua Marcenaria. Todos os direitos reservados.</small>
+        <small>Feito com ❤️ em madeira e dedicação.</small>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Atualiza ano automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Guia rápido no código: como trocar placeholders por imagens reais
+    /*
+      1) Crie uma pasta "assets" no mesmo nível deste HTML (no GitHub).
+      2) Substitua os blocos de placeholder:
+         <div class="img"> ... </div>
+         por:
+         <img class="img" src="assets/nome-do-arquivo.jpg" alt="descrição da foto" loading="lazy">
+      3) Para o carrossel do topo, troque cada .card por:
+         <img class="card" src="assets/projeto-01.jpg" alt="Cozinha planejada" loading="lazy">
+         (Opcional: mantenha um <span class="badge">Categoria</span> posicionado com CSS se quiser rótulo.)
+      4) Dica de proporção: use fotos 16:10 ou 3:2 para melhor encaixe.
+    */
+  </script>
 </body>
 </html>
