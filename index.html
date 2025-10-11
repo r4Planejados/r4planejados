@@ -45,15 +45,71 @@
     .btn:hover{transform:translateY(-2px)}
 
     /* Hero */
-    .hero{position:relative;padding:88px 0 40px}
-    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-    .kicker{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.95rem}
-    .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--success);box-shadow:0 0 0 6px rgba(104,176,138,.12)}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(36px,4.8vw,60px);line-height:1.05;margin:14px 0 14px}
-    .lead{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:62ch}
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-    .ghost{padding:12px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:transparent}
-    .ghost:hover{border-color:rgba(255,255,255,.28)}
+.hero {
+  position: relative;
+  padding: 88px 0 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .5fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-grid .image img {
+  width: 100%;       /* ocupa toda a coluna */
+  height: auto;      /* mantém proporção */
+  max-width: 400px;  /* limite máximo de largura */
+  display: block;    /* remove espaçamento extra */
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.kicker .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 6px rgba(104, 176, 138, .12);
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 4.8vw, 60px);
+  line-height: 1.05;
+  margin: 14px 0 14px;
+}
+
+.lead {
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.ghost {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  background: transparent;
+}
+
+.ghost:hover {
+  border-color: rgba(255, 255, 255, .28);
+}
 
     /* Showcase / carousel com placeholders */
     .showcase{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:linear-gradient(180deg, #171b1e, #0f1214);box-shadow:var(--shadow)}
