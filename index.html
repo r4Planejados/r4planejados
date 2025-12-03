@@ -65,7 +65,7 @@
     
     /* Showcase / carousel com placeholders */
     .showcase{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:linear-gradient(180deg, #171b1e, #0f1214);box-shadow:var(--shadow)}
-    .rail{display:flex;gap:16px;animation:scroll 32s linear infinite}
+    .{display:flex;gap:16px;animation:scroll 32s linear infinite}
     .rail:hover{animation-play-state:paused}
     .card{flex:0 0 380px;height:260px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(135deg, #22272b, #1a1f23);border:1px solid rgba(255,255,255,.06)}
     .img {
@@ -205,13 +205,13 @@
         <div class="showcase" aria-label="Prévia de projetos (placeholders)">
           <div class="rail" aria-hidden="true">
             <!-- DUPLIQUE OU SUBSTITUA AS .card POR <img> QUANDO TIVER FOTOS -->
-            <img class="img" src="Projeto/Cozinha.jpg" alt="descrição da foto" loading="lazy">
-            <img class="img" src="Projeto/Cozinha0.jpg" alt="descrição da foto" loading="lazy">
+            <img class="carousel-img" src="Projeto/Cozinha.jpg" alt="descrição da foto" loading="lazy">
+            <img class="carousel-img" src="Projeto/Cozinha0.jpg" alt="descrição da foto" loading="lazy">
             <div class="card"><span class="badge">Painel</span><div class="ph">PAINEL RIPADO <small>(substitua por imagem real)</small></div></div>
             <div class="card"><span class="badge">Home Office</span><div class="ph">HOME OFFICE <small>(substitua por imagem real)</small></div></div>
             <!-- Loop visual: repete para efeito de rolagem infinita -->
-            <img class="img" src="Projeto/Cozinha.jpg" alt="descrição da foto" loading="lazy">
-            <img class="img" src="Projeto/Cozinha0.jpg" alt="descrição da foto" loading="lazy">
+            <img class="carousel-img" src="Projeto/Cozinha.jpg" alt="descrição da foto" loading="lazy">
+            <img class="carousel-img" src="Projeto/Cozinha0.jpg" alt="descrição da foto" loading="lazy">
             <div class="card"><span class="badge">Painel</span><div class="ph">PAINEL RIPADO <small>(substitua por imagem real)</small></div></div>
             <div class="card"><span class="badge">Home Office</span><div class="ph">HOME OFFICE <small>(substitua por imagem real)</small></div></div>
           </div>
