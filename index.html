@@ -146,38 +146,22 @@
       .rail{animation:none}
       .hover-lift,.btn{transition:none}
     }
-    /* Remove o ícone antigo */
-.ico {
-    background: none !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Ajusta o tamanho do novo ícone */
-.ico {
-    width: 64px;
-    height: 64px;
-}
-
-.ico img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-    .service .ico {
-    width: 64px;
-    height: 64px;
-    background: #111 !important; /* mantém o fundo arredondado do tema */
+/* --- ÍCONE CORRIGIDO --- */
+.service .ico {
+    width: 56px;          /* tamanho original do template */
+    height: 56px;
+    background: #111;     /* mantém o bloco arredondado original */
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow);
 }
 
+/* imagem dentro */
 .service .ico img {
-    width: 48px;
-    height: 48px;
+    width: 36px;          /* tamanho perfeito dentro do container */
+    height: 36px;
     object-fit: contain;
 }
   </style>
