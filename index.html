@@ -42,7 +42,7 @@
   width: 38px;
   height: 38px;
   border-radius: 12px;
-  background-image: url("Projeto/Cozinha planejada (logo).png");
+  background-image: url("caminho/da-sua-imagem.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 150%; /* 🔹 aumenta 1.5x — ajuste conforme quiser */
@@ -248,9 +248,7 @@
         </div>
         <div class="grid services">
           <article class="service hover-lift" aria-label="Cozinhas planejadas">
-            <span class="ico">
-    <img src="Projeto/Cozinha planejada (logo).png" alt="">
-</span>
+            <span class="ico" aria-hidden="true"></span>
             <div>
               <h3>Cozinhas Planejadas</h3>
               <p>Mobiliário inteligente, otimização de espaço e ferragens premium para uso diário com conforto.</p>
@@ -454,3 +452,19 @@
   </script>
 </body>
 </html>
+/* Remove o logo antigo */
+.ico {
+    background: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;     /* ajuste se quiser maior ou menor */
+    height: 48px;
+}
+
+/* Ajusta o tamanho do seu novo logo */
+.ico img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
