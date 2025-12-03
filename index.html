@@ -74,6 +74,30 @@
     object-fit: cover;
     border-radius: 16px;
 }
+    /* 🔥 RESPONSIVIDADE: AJUSTA PARA CELULAR E TABLET */
+@media (max-width: 768px) {
+    .card, .img {
+        flex: 0 0 180px;
+        width: 180px;
+        height: 120px;
+    }
+
+    header .logo h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card, .img {
+        flex: 0 0 150px;
+        width: 150px;
+        height: 100px;
+    }
+
+    header .logo h1 {
+        font-size: 1.2rem;
+    }
+}
     .card::after{content:"Foto do projeto";position:absolute;inset:auto 12px 12px 12px;color:#c9d1d9;background:rgba(0,0,0,.35);padding:6px 10px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
     .ph{position:absolute;inset:0;background:
       radial-gradient(1200px 300px at -10% -40%, rgba(212,163,115,.18), transparent 60%),
