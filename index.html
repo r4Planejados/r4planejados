@@ -74,40 +74,6 @@
     object-fit: cover;
     border-radius: 16px;
 }
-    /* RESPONSIVIDADE — corrigindo tamanho do carousel no celular */
-@media (max-width: 768px) {
-
-    .rail {
-        gap: 10px;
-    }
-
-    .card,
-    .img {
-        flex: 0 0 180px;   /* largura menor no celular */
-        width: 180px;
-        height: 120px;     /* altura menor no celular */
-    }
-
-    .card {
-        border-radius: 12px;
-    }
-
-    .img {
-        border-radius: 12px;
-        object-fit: cover;
-    }
-}
-
-/* Ajuste para telas MUITO pequenas (iPhone antigo) */
-@media (max-width: 480px) {
-
-    .card,
-    .img {
-        flex: 0 0 150px;
-        width: 150px;
-        height: 100px;
-    }
-}
     .card::after{content:"Foto do projeto";position:absolute;inset:auto 12px 12px 12px;color:#c9d1d9;background:rgba(0,0,0,.35);padding:6px 10px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
     .ph{position:absolute;inset:0;background:
       radial-gradient(1200px 300px at -10% -40%, rgba(212,163,115,.18), transparent 60%),
